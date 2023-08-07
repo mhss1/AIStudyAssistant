@@ -1,0 +1,17 @@
+AI Study Assistant is an app designed to enhance your learning experience and boost academic performance. With a comprehensive set of AI-powered features, it serves as your personal tutor, lecture summarizer, writer, and question generator all powered by Google PaLM 2. Whether you need assistance with specific topics, summarizing lectures, crafting essays, or generating practice questions, AI Study Assistant has got you covered.
+
+Key Features:
+
+Personal Tutor:
+Interact with an AI chatbot that can answer your general questions or provide explanations on specific subjects. Ask questions in natural language or attach an image of a question, and the AI will automatically recognize and process the text, providing you with accurate and helpful responses.
+
+Lecture Summarizer:
+Effortlessly summarize lengthy lecture notes or PDF files. Simply input the lecture file or content, and AI Study Assistant will generate a concise summary in a well-formatted PDF format. The summary includes headlines, bullet points, and other organizational elements, making it easier for you to review and grasp the key concepts.
+
+Writer:
+Overcome writer's block and streamline your essay writing process. Input a subject or topic, and AI Study Assistant will generate a comprehensive essay in a well-structured PDF format. The essay will include informative headlines, bullet points, and other key elements to help you present your ideas coherently and effectively.
+
+Questions Generator:
+Test your knowledge and reinforce your learning by generating practice questions. Input a lecture PDF file or content, and AI Study Assistant will generate a PDF file containing multiple-choice questions with the correct answers and detailed explanations. This feature allows you to evaluate your understanding of the material and identify areas that require further study.
+
+Empower your academic journey with AI Study Assistant and unlock your full potential
