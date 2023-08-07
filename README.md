@@ -1,17 +1,17 @@
 ![Stars](https://img.shields.io/github/stars/mhss1/aistudyassistant?style=social)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-<img align="left" width="80" height="80" src="https://github.com/mhss1/AIStudyAssistant/assets/58703865/99871620-c566-4918-8d1f-4a14e6a818cb.png" alt="app icon">
+<img align="left" width="80" height="80" src="https://github.com/mhss1/AIStudyAssistant/assets/58703865/3ff87dab-e0f8-4929-85ae-98cea95d1b27.png" alt="app icon">
 
 # AI Study Assistant
   
 ### AI chatbot, Lecture Summarizer, Essay Writer and Questionss Generator.
 <div align="left">
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/47dbedac-fe0b-4841-982d-6e5648e7b259.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/b1538572-7af8-470e-8090-3b20c5160a25.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/850f99f2-6e4e-442a-bcdc-95a110465259.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/f2ef27e1-f45a-4918-89ad-4cc5a9ab3398.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/6d86ab39-33c5-4279-bd92-c97edd732717.jpg" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/4b637ddb-5289-4cd4-8fb4-7f314602133c.jpg" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/1b83d855-1857-4b34-b480-0418c13e9ebc.jpg" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/d43a7479-bb8e-4908-b2d5-a1749e1b8c1a.jpg" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/7c7d733a-1073-4272-b3e7-7580a14028e8.jpg" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/bf435405-bf05-488a-ba90-8f35a9c337c6.jpg" width ="160" />
 </div>
 
 [screenshots made by previewed](https://previewed.app)
