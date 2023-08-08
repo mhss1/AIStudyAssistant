@@ -5,7 +5,7 @@
 
 # AI Study Assistant
   
-### AI chatbot, Lecture Summarizer, Essay Writer and Questionss Generator.
+### AI chatbot, Lecture Summarizer, Essay Writer and Questions Generator.
 <div align="left">
 <img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/4b637ddb-5289-4cd4-8fb4-7f314602133c.jpg" width ="160" />
 <img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/1b83d855-1857-4b34-b480-0418c13e9ebc.jpg" width ="160" />
@@ -39,7 +39,6 @@ Test your knowledge and reinforce your learning by generating practice questions
 ## Technologies
 - 100% Kotlin.
 - Made Using Jetpack Compose.
-- Widgets made with Compose Glance.
 - Following Clean Architecture approach.
 - Following MVVM Architectural Design Pattern.
 ### Used in the app :
@@ -55,6 +54,5 @@ Test your knowledge and reinforce your learning by generating practice questions
 ## Contributing
 To get started, take a look at [CONTRIBUTING.md](CONTRIBUTING.md).
 
----
-Icons Attribution 
-Main Screen Icons made by Freepik from www.flaticon.com
+------
+*Main Screen Icons made by Freepik from www.flaticon.com
