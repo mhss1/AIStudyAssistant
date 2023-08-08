@@ -233,7 +233,7 @@ fun SettingsScreen(
                 SettingsLinkItem(
                     title = stringResource(R.string.request_feature_report_bug),
                     iconRes = R.drawable.ic_bulb,
-                    url = "https://github.com/users/mhss1/AIStudyAssistant/issues"
+                    url = "https://github.com/mhss1/AIStudyAssistant/issues"
                 ){}
             }
             item {
