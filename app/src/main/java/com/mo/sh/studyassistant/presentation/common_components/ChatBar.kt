@@ -77,8 +77,9 @@ fun ChatBar(
                     .padding(top = 6.dp, bottom = 8.dp, start = 8.dp, end = 0.dp)
                     .heightIn(0.dp, 400.dp)
                     .border(1.5.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(32.dp)),
-                colors = TextFieldDefaults.textFieldColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                    unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
                     focusedIndicatorColor = Color.Transparent,
                     unfocusedIndicatorColor = Color.Transparent,
                     disabledIndicatorColor = Color.Transparent

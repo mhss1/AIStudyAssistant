@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Main Screen-->
+    <string name="personal_tutor_title">المساعد الشخصي</string>
+    <string name="personal_tutor_description">مساعدك الشخصي للدراسة. اسأل اسئلة عامة, افهم المواضيع المعقدة وحل وافهم المسائل الصعبة.</string>
+    <string name="lecture_summaries_title">تلخيص المحاضرات</string>
+    <string name="lecture_summaries_description">أتقن محتوى المحاضرة دون عناء. مفتاحك للفهم شامل. احصل على ملخص تفصيلي مما يوفر لك الوقت مع ضمان استيعابك للأساسيات</string>
+    <string name="writer_title">الكاتب</string>
+    <string name="writer_description">أطلق العنان لإمكانياتك الكتابية، مما يساعدك على التعبير عن الأفكار ببلاغة وإنشاء عمل عالي الجودة. قم بتبسيط عملية الكتابة الخاصة وتميز في مهامك بسهولة.</string>
+    <string name="questions_title">اختبر نفسك</string>
+    <string name="questions_description">عزز تجربة تعلمك، تقوم هذه الأداة بإنشاء أسئلة متعددة الخيارات مصممة خصيصًا لتعزيز فهمك. اختبر معلوماتك، واستعد للاختبارات بسهولة.</string>
+    <string name="main_screen_title">أهلا!</string>
+    <string name="main_screen_subtitle">اختر قسم من القائمة وابدأ التعلم.</string>
+
+    <!--Chat-->
+    <string name="unknown_name">اسم ملف غير معرف</string>
+    <string name="solve_this_q">كيف احل هذا السؤال؟</string>
+    <string name="explain_this_more">اشرح هذا اكثر</string>
+    <string name="i_do_not_understand">أنا لا افهم هذا</string>
+    <string name="tutor_chat_hint">اسأل اي سؤال</string>
+    <string name="text_from_image">نص داخل صورة</string>
+    <string name="pdf_file">PDF ملف</string>
+    <string name="text_cant_be_empty">النص لا يمكن ان يكون فارغ</string>
+    <string name="yesterday">أمس</string>
+    <string name="no_internet">لا يوجد اتصال بالأنترنت</string>
+    <string name="unknown_error">حدث خطأ غير معروف\nحاول استخدام محتوى مختلف\nحاول استخدام نص اقصر\nتذكر انه حاليا يدعم اللغة الانجليزية فقط</string>
+    <string name="cancel">الغاء</string>
+    <string name="no_text_recognized">لم يتم التعرف على نص في الصورة</string>
+    <string name="error_extracting_text">حدث خطأ اثناء استخراج النص من المرفق</string>
+    <string name="summary">ملخصل</string>
+    <string name="questions">اسئلة</string>
+    <string name="essay">مقال</string>
+    <string name="attach_or_paste">ارفق ملف او ادخل المحتوى</string>
+    <string name="pdf_saved">تم حفظ الملف بنجاح</string>
+    <string name="error_creating_pdf">حدث خطأ اثناء انشاء الملف</string>
+    <string name="provide_content">الرجاء كتابة او ارفاق محتوى</string>
+    <string name="subject_cant_be_empty">الرجاء ادخال موضوع</string>
+    <string name="essay_subject">موضوع المقال</string>
+    <string name="text_copied">تم نسخ النص</string>
+    <string name="delete">حذف الكل</string>
+    <string name="clear_chat">حذف المحادثات؟</string>
+    <string name="clear_chat_description">سيتم حذف كل الرسائل في هذا القسم</string>
+    <string name="copy">نسخ</string>
+    <string name="context_cleared">تم مسح السياق</string>
+
+    <string-array name="chat_notes">
+        <item>هذا الذكاء الاصطناعي مدعوم بواسطة\nGoogle PaLM 2</item>
+        <item>ليس لديه معرفه بالاحداث بعد فبراير 2023</item>
+        <item>من الممكن ان يكتب نتائج غير دقيقة, غير مكتملة او ليست لها صلة من حين الى آخر</item>
+        <item>حاليا يدعم اللغة الانجليزية فقط</item>
+    </string-array>
+
+    <string name="notes">ملاحظات</string>
+
+    <string name="settings">الاعدادات</string>
+    <string name="theme">وضع التطبيق</string>
+    <string name="about">حول</string>
+    <string name="product">التطبيق</string>
+    <string name="api_key">API Key</string>
+    <string name="no_api_key_error">لم يتم العثور على API Key. الرجاء ادخالة في الاعدادات</string>
+    <string name="api_key_creation_message">اذا لم يكن لديك بالفعل, يمكنك الحصول عليه مجانا في [موقع Google PaLM](https://developers.generativeai.google/products/palm)</string>
+    <string name="save">حفظ</string>
+    <string name="app_version">اصدار التطبيق</string>
+    <string name="project_on_github">المشروع على GitHub</string>
+    <string name="request_feature_report_bug">اضف اقتراح\ابلغ عن خطأ</string>
+    <string name="project_roadmap">خريطة التطبيق</string>
+
+</resources>
