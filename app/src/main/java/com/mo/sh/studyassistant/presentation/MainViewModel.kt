@@ -38,7 +38,7 @@ class MainViewModel @Inject constructor(
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     val apiKey = prefs.get(stringPreferencesKey(DataStoreRepository.API_KEY), "")
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "")
+        .stateIn(viewModelScope, SharingStarted.Eagerly, "")
 
     private val _loadingState = MutableStateFlow<NetworkResult>(NetworkResult.Success)
     val loadingState: StateFlow<NetworkResult> = _loadingState
