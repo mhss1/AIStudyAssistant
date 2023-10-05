@@ -43,6 +43,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.compositeOver
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -253,7 +254,8 @@ fun BaseChatSurface(
                     .consumeWindowInsets(paddingValues)
                     .padding(
                         horizontal = 4.dp
-                    ),
+                    )
+                    .testTag("messages-list"),
                 state = lazyListState,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 reverseLayout = true,

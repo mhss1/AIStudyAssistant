@@ -29,12 +29,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.compositeOver
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.datastore.preferences.core.intPreferencesKey
@@ -49,7 +53,7 @@ import com.mo.sh.studyassistant.data.repository.DataStoreRepository.Companion.TH
 import com.mo.sh.studyassistant.data.repository.DataStoreRepository.Companion.API_KEY
 import dev.jeziellago.compose.markdowntext.MarkdownText
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
 fun SettingsScreen(
     viewModel: MainViewModel
@@ -175,7 +179,11 @@ fun SettingsScreen(
                                     },
                                     modifier = Modifier
                                         .fillMaxWidth()
-                                        .padding(8.dp),
+                                        .padding(8.dp)
+                                        .semantics {
+                                            testTagsAsResourceId = true
+                                        }
+                                        .testTag("api-key-text-field"),
                                     shape = RoundedCornerShape(8.dp)
                                 )
                                 Spacer(Modifier.height(8.dp))

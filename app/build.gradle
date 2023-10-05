@@ -32,6 +32,12 @@ android {
         debug {
             applicationIdSuffix ".debug"
         }
+        benchmark {
+            initWith release
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ['release']
+            debuggable false
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -133,6 +139,9 @@ dependencies {
 
     // Squircle shape
     implementation "com.github.stoyan-vuchev:squircle-shape:1.0.3"
+
+    // Baseline profiler
+    implementation "androidx.profileinstaller:profileinstaller:1.3.1"
 }
 
 ksp {
