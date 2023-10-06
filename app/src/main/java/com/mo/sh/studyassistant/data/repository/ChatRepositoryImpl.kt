@@ -48,7 +48,7 @@ class ChatRepositoryImpl(
     ): NetworkResult = withContext(Dispatchers.IO) {
 
         if (apiKey.isBlank()){
-            return@withContext NetworkResult.Error.Network(App.getString(R.string.no_api_key_error))
+            return@withContext NetworkResult.Error.Network("${App.getString(R.string.no_api_key_error)}\n${App.getString(R.string.api_key_creation_message)}")
         }
         val chat = Chat(
             section = section.ordinal
@@ -141,7 +141,7 @@ class ChatRepositoryImpl(
     ): NetworkResult = withContext(Dispatchers.IO) {
 
         if (apiKey.isBlank()){
-            return@withContext NetworkResult.Error.Network(App.getString(R.string.no_api_key_error))
+            return@withContext NetworkResult.Error.Network("${App.getString(R.string.no_api_key_error)}\n${App.getString(R.string.api_key_creation_message)}")
         }
 
         val cId = chat?.chat?.id ?: messagesDao.addChat(

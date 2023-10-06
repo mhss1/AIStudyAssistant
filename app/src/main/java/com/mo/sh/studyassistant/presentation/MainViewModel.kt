@@ -11,6 +11,7 @@ import com.mo.sh.studyassistant.domain.model.Message
 import com.mo.sh.studyassistant.domain.model.MessageSection
 import com.mo.sh.studyassistant.domain.model.NetworkResult
 import com.mo.sh.studyassistant.domain.repository.ChatRepository
+import com.mo.sh.studyassistant.domain.repository.PreferencesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
@@ -26,7 +27,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(
     private val repository: ChatRepository,
-    private val dataStore: DataStoreRepository
+    private val prefs: PreferencesRepository
 ) : ViewModel() {
 
     private val section = MutableStateFlow(MessageSection.Tutor)
@@ -36,8 +37,8 @@ class MainViewModel @Inject constructor(
         repository.getSectionChats(it.ordinal)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
-    val apiKey = dataStore.get(stringPreferencesKey(DataStoreRepository.API_KEY), "")
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "")
+    val apiKey = prefs.get(stringPreferencesKey(DataStoreRepository.API_KEY), "")
+        .stateIn(viewModelScope, SharingStarted.Eagerly, "")
 
     private val _loadingState = MutableStateFlow<NetworkResult>(NetworkResult.Success)
     val loadingState: StateFlow<NetworkResult> = _loadingState
@@ -81,10 +82,10 @@ class MainViewModel @Inject constructor(
         }
 
     fun <T> save(key: Preferences.Key<T>, value: T) = viewModelScope.launch{
-        dataStore.save(key, value)
+        prefs.save(key, value)
     }
 
     fun <T> get(key: Preferences.Key<T>, defaultValue: T): Flow<T> {
-        return dataStore.get(key, defaultValue)
+        return prefs.get(key, defaultValue)
     }
 }

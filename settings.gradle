@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Study Assistant"
 include ':app'
+include ':benchmark'

@@ -17,7 +17,10 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.core.net.toUri
 import androidx.core.view.WindowCompat
 import androidx.datastore.preferences.core.intPreferencesKey
@@ -45,6 +48,7 @@ class MainActivity : ComponentActivity() {
 
     private val mainViewModel: MainViewModel by viewModels()
 
+    @OptIn(ExperimentalComposeUiApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -123,7 +127,9 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize().semantics {
+                        testTagsAsResourceId = true
+                    },
                     color = MaterialTheme.colorScheme.background
                 ) {
                     NavHost(

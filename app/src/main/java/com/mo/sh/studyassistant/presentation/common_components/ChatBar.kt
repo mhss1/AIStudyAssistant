@@ -25,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.mo.sh.studyassistant.R
@@ -76,9 +77,11 @@ fun ChatBar(
                     .weight(1f)
                     .padding(top = 6.dp, bottom = 8.dp, start = 8.dp, end = 0.dp)
                     .heightIn(0.dp, 400.dp)
-                    .border(1.5.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(32.dp)),
-                colors = TextFieldDefaults.textFieldColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                    .border(1.5.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(32.dp))
+                    .testTag("chat-text-field"),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                    unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
                     focusedIndicatorColor = Color.Transparent,
                     unfocusedIndicatorColor = Color.Transparent,
                     disabledIndicatorColor = Color.Transparent
@@ -104,7 +107,8 @@ fun ChatBar(
             )
             IconButton(
                 onClick = { onSubmit() },
-                enabled = buttonEnabled
+                enabled = buttonEnabled,
+                modifier = Modifier.testTag("send-button")
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_send),

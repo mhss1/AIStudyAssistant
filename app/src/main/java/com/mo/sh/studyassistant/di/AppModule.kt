@@ -23,6 +23,7 @@ import kotlinx.serialization.json.Json
 import javax.inject.Singleton
 import com.mo.sh.studyassistant.data.repository.*
 import com.mo.sh.studyassistant.domain.repository.ChatRepository
+import com.mo.sh.studyassistant.domain.repository.PreferencesRepository
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -88,9 +89,9 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideDataStoreRepository(
+    fun providePreferencesRepository(
         @ApplicationContext context: Context
-    ) = DataStoreRepository(
+    ): PreferencesRepository = DataStoreRepository(
         context
     )
 
