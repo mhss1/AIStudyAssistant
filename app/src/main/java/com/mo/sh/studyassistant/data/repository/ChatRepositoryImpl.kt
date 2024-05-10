@@ -2,21 +2,17 @@ package com.mo.sh.studyassistant.data.repository
 
 import android.net.Uri
 import androidx.documentfile.provider.DocumentFile
+import com.google.ai.client.generativeai.type.content
 import com.mo.sh.studyassistant.R
 import com.mo.sh.studyassistant.app.App
 import com.mo.sh.studyassistant.data.local.MessagesDao
-import com.mo.sh.studyassistant.data.network.PalmApi
+import com.mo.sh.studyassistant.data.network.GeminiApi
 import com.mo.sh.studyassistant.domain.model.Chat
 import com.mo.sh.studyassistant.domain.model.ChatWithMessages
 import com.mo.sh.studyassistant.domain.model.Message
-import com.mo.sh.studyassistant.domain.model.MessagePrompt
 import com.mo.sh.studyassistant.domain.model.MessageSection
 import com.mo.sh.studyassistant.domain.model.MessageType
 import com.mo.sh.studyassistant.domain.model.NetworkResult
-import com.mo.sh.studyassistant.domain.model.PalmMessage
-import com.mo.sh.studyassistant.domain.model.PalmText
-import com.mo.sh.studyassistant.domain.model.PalmTextPrompt
-import com.mo.sh.studyassistant.domain.model.PalmeMessagePrompt
 import com.mo.sh.studyassistant.domain.repository.ChatRepository
 import com.mo.sh.studyassistant.presentation.common_components.AttachmentType
 import com.mo.sh.studyassistant.util.MLManager
@@ -33,7 +29,7 @@ import kotlin.coroutines.suspendCoroutine
 
 class ChatRepositoryImpl(
     private val messagesDao: MessagesDao,
-    private val api: PalmApi,
+    private val api: GeminiApi,
     private val ml: MLManager,
     private val pdf: PDFManager
 ) : ChatRepository {
@@ -47,8 +43,14 @@ class ChatRepositoryImpl(
         pdfUri: Uri?,
     ): NetworkResult = withContext(Dispatchers.IO) {
 
-        if (apiKey.isBlank()){
-            return@withContext NetworkResult.Error.Network("${App.getString(R.string.no_api_key_error)}\n${App.getString(R.string.api_key_creation_message)}")
+        if (apiKey.isBlank()) {
+            return@withContext NetworkResult.Error.Network(
+                "${App.getString(R.string.no_api_key_error)}\n${
+                    App.getString(
+                        R.string.api_key_creation_message
+                    )
+                }"
+            )
         }
         val chat = Chat(
             section = section.ordinal
@@ -92,14 +94,10 @@ class ChatRepositoryImpl(
             val text = "${getSectionSystemPrompt(section)}\n\"$messageContent\""
 
             val response = api.generateText(
-                prompt = PalmTextPrompt(
-                    PalmText(
-                        text = text
-                    )
-                ),
-                apiKey = apiKey
+                prompt = text,
+                key = apiKey
             )
-            if (response.candidates.isEmpty()) {
+            if (response.isNullOrBlank()) {
                 messagesDao.deleteChat(cId)
                 return@withContext NetworkResult.Error.Unknown(App.getString(R.string.unknown_error))
             }
@@ -107,7 +105,7 @@ class ChatRepositoryImpl(
                 Message(
                     chatId = cId,
                     type = MessageType.Bot.ordinal,
-                    content = response.candidates.first().output,
+                    content = response,
                     time = System.currentTimeMillis(),
                     contentIsPdf = true,
                     pdfContentType = getPdfContentType(section),
@@ -140,8 +138,14 @@ class ChatRepositoryImpl(
         pdfUri: Uri?,
     ): NetworkResult = withContext(Dispatchers.IO) {
 
-        if (apiKey.isBlank()){
-            return@withContext NetworkResult.Error.Network("${App.getString(R.string.no_api_key_error)}\n${App.getString(R.string.api_key_creation_message)}")
+        if (apiKey.isBlank()) {
+            return@withContext NetworkResult.Error.Network(
+                "${App.getString(R.string.no_api_key_error)}\n${
+                    App.getString(
+                        R.string.api_key_creation_message
+                    )
+                }"
+            )
         }
 
         val cId = chat?.chat?.id ?: messagesDao.addChat(
@@ -196,19 +200,26 @@ class ChatRepositoryImpl(
 
         try {
             val response = api.generateMessage(
-                prompt = PalmeMessagePrompt(
-                    MessagePrompt(
-                        context = getSectionSystemPrompt(MessageSection.Tutor),
-                        messages = chat?.messages?.map {
-                            PalmMessage(it.content + it.attachmentContent)
-                        }?.plus(PalmMessage(newMessageContent + attachmentContent)) ?: listOf(
-                            PalmMessage(newMessageContent + attachmentContent)
-                        )
-                    )
-                ),
-                apiKey = apiKey
+                history =
+                listOf(content(role = "user") {
+                    text(getSectionSystemPrompt(MessageSection.Tutor))
+                },
+                    // last message has to be from model
+                    content(role = "model") {
+                        text("Okay")
+                    }
+                ) + (chat?.messages?.reversed()?.map {
+                    content(
+                        role = if (it.type == MessageType.User.ordinal) "user" else "model"
+                    ) {
+                        text(it.content + it.attachmentContent)
+                    }
+                } ?: emptyList()),
+                message = newMessageContent + attachmentContent,
+                key = apiKey
             )
-            if (response.candidates.isEmpty()) {
+
+            if (response.isNullOrBlank()) {
                 messagesDao.deleteMessage(mId)
                 return@withContext NetworkResult.Error.Unknown(App.getString(R.string.unknown_error))
             }
@@ -216,7 +227,7 @@ class ChatRepositoryImpl(
                 Message(
                     chatId = cId,
                     type = MessageType.Bot.ordinal,
-                    content = response.candidates.first().content,
+                    content = response,
                     time = System.currentTimeMillis()
                 )
             )

@@ -20,7 +20,7 @@
      alt="Get it on GitHub"
      height="80">](https://github.com/mhss1/AIStudyAssistant/releases/latest)
 
-AI Study Assistant is an app designed to enhance your learning experience and boost academic performance. With a comprehensive set of AI-powered features, it serves as your personal tutor, lecture summarizer, writer, and question generator all powered by Google PaLM 2. Whether you need assistance with specific topics, summarizing lectures, crafting essays, or generating practice questions, AI Study Assistant has got you covered.
+AI Study Assistant is an app designed to enhance your learning experience and boost academic performance. With a comprehensive set of AI-powered features, it serves as your personal tutor, lecture summarizer, writer, and question generator all powered by Google Gemini pro. Whether you need assistance with specific topics, summarizing lectures, crafting essays, or generating practice questions, AI Study Assistant has got you covered.
 
 ## Features:
 

@@ -45,7 +45,7 @@
     <string name="context_cleared">تم مسح السياق</string>
 
     <string-array name="chat_notes">
-        <item>هذا الذكاء الاصطناعي مدعوم بواسطة\nGoogle PaLM 2</item>
+        <item>هذا الذكاء الاصطناعي مدعوم بواسطة\nGoogle Gimini</item>
         <item>ليس لديه معرفه بالاحداث بعد فبراير 2023</item>
         <item>من الممكن ان يكتب نتائج غير دقيقة, غير مكتملة او ليست لها صلة من حين الى آخر</item>
         <item>حاليا يدعم اللغة الانجليزية فقط</item>
@@ -59,7 +59,7 @@
     <string name="product">التطبيق</string>
     <string name="api_key">API Key</string>
     <string name="no_api_key_error">لم يتم العثور على API Key. الرجاء ادخالة في الاعدادات</string>
-    <string name="api_key_creation_message">اذا لم يكن لديك بالفعل, يمكنك الحصول عليه مجانا في [موقع Google PaLM](https://developers.generativeai.google/products/palm)</string>
+    <string name="api_key_creation_message">اذا لم يكن لديك بالفعل, يمكنك الحصول عليه مجانا في [موقع Google AI Studio](https://aistudio.google.com/app/apikey)</string>
     <string name="save">حفظ</string>
     <string name="app_version">اصدار التطبيق</string>
     <string name="project_on_github">المشروع على GitHub</string>

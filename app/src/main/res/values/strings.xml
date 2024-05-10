@@ -46,7 +46,7 @@
     <string name="context_cleared">Context cleared</string>
 
     <string-array name="chat_notes">
-        <item>This AI is Powered by Google PaLM 2.</item>
+        <item>This AI is Powered by Gemini.</item>
         <item>It does not have knowledge of events after February 2023.</item>
         <item>It may occasionally generate incorrect, irrelevant or incomplete answers.</item>
         <item>This model only supports English currently.</item>
@@ -58,8 +58,8 @@
     <string name="about">About</string>
     <string name="product">Product</string>
     <string name="api_key">API Key</string>
-    <string name="no_api_key_error">No API key found. Please add your PaLM 2 API key in Settings.</string>
-    <string name="api_key_creation_message">If you don\'t have an API key yet, you can create one by following the instructions at [Google PaLM website](https://developers.generativeai.google/products/palm)</string>
+    <string name="no_api_key_error">No API key found. Please add your Gemini API key in Settings.</string>
+    <string name="api_key_creation_message">If you don\'t have an API key yet, you can create one by following the instructions at [Google AI Studio website](https://aistudio.google.com/app/apikey)</string>
     <string name="save">Save</string>
     <string name="app_version">App version</string>
     <string name="project_on_github">Project on GitHub</string>
