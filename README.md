@@ -4,22 +4,22 @@
 <img align="left" width="80" height="80" src="https://github.com/mhss1/AIStudyAssistant/assets/58703865/3ff87dab-e0f8-4929-85ae-98cea95d1b27.png" alt="app icon">
 
 # AI Study Assistant
-  
+
 ### AI chatbot, Lecture Summarizer, Essay Writer and Questions Generator.
 <div align="left">
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/4b637ddb-5289-4cd4-8fb4-7f314602133c.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/1b83d855-1857-4b34-b480-0418c13e9ebc.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/d43a7479-bb8e-4908-b2d5-a1749e1b8c1a.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/7c7d733a-1073-4272-b3e7-7580a14028e8.jpg" width ="160" />
-<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/bf435405-bf05-488a-ba90-8f35a9c337c6.jpg" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/9f161fd1-84a8-417c-8b7e-6f0df3ec63d4.jpg" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/890e1689-4260-45e0-b66f-c78e81ce931e" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/0bad41e7-0d05-409c-8bed-54267fc92a81" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/313e98ee-3783-4885-a4e3-556540921a50" width ="160" />
+<img src = "https://github.com/mhss1/AIStudyAssistant/assets/58703865/29c886f9-4b47-4a11-9d61-df351b17b034" width ="160" />
 </div>
 
 [screenshots made by previewed](https://previewed.app)
 
-[<img src="https://camo.githubusercontent.com/70bffd8873ab81e1bb0bccc44e488c3a989e3bd5/68747470733a2f2f692e6962622e636f2f71306d6463345a2f6765742d69742d6f6e2d6769746875622e706e67"
+[<img src="https://github.com/mhss1/AIStudyAssistant/assets/58703865/da55c232-80c0-4f9b-bafa-74ba9337ff0e"
      alt="Get it on GitHub"
      height="80">](https://github.com/mhss1/AIStudyAssistant/releases/latest)
-      
+
 AI Study Assistant is an app designed to enhance your learning experience and boost academic performance. With a comprehensive set of AI-powered features, it serves as your personal tutor, lecture summarizer, writer, and question generator all powered by Google PaLM 2. Whether you need assistance with specific topics, summarizing lectures, crafting essays, or generating practice questions, AI Study Assistant has got you covered.
 
 ## Features:
